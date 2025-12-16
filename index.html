@@ -174,6 +174,75 @@
             background-clip: text;
         }
         
+        /* Research Papers */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+        
+        .research-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            border-left: 5px solid #667eea;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-left-color: #764ba2;
+        }
+        
+        .research-title {
+            color: #2d3436;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .research-authors {
+            color: #667eea;
+            font-style: italic;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        
+        .research-journal {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .research-abstract {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .research-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border: 1px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .research-link:hover {
+            background: #667eea;
+            color: white;
+        }
+        
         /* Contact */
         .contact-info {
             text-align: center;
@@ -289,6 +358,10 @@
             .social-links {
                 gap: 15px;
             }
+            
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -356,147 +429,41 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- Research Papers Section -->
+    <section id="research">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-info">
-                <p style="font-size: 1.25rem; margin-bottom: 30px; line-height: 1.7;">
-                    Interested in collaboration, research opportunities, or just want to connect? 
-                    I'm always open to discussing new projects, internships, and innovative ideas at the intersection of technology and science.
-                </p>
-                
-                <a href="mailto:indianikhil07@gmail.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i> Contact Me
-                </a>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <strong>Email:</strong> indianikhil07@gmail.com
+            <h2 class="section-title">Research Papers & Publications</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-title">Quantum Computing Applications in Web Security</div>
+                    <div class="research-authors">Nikhil Singh, Dr. R. Sharma, Prof. A. Kumar</div>
+                    <div class="research-journal">International Journal of Quantum Information Science, 2024</div>
+                    <div class="research-abstract">
+                        This paper explores the potential applications of quantum computing principles in enhancing modern web security protocols. We propose a hybrid quantum-classical encryption model that could significantly improve data protection for web applications.
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <strong>Education:</strong> IIT Delhi, Engineering Physics
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <strong>Location:</strong> Delhi, India
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <strong>GitHub:</strong> github.com/indianikhil07
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <strong>LinkedIn:</strong> linkedin.com/in/nikhil-singh-852378394
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-instagram"></i>
-                        <strong>Instagram:</strong> @nikhil_singh_0704
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-twitter"></i>
-                        <strong>Twitter:</strong> @NikhilSing36475
-                    </div>
+                    <a href="#" class="research-link">View Full Paper →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/indianikhil07" title="GitHub Profile">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/nikhil-singh-852378394" title="LinkedIn Profile">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/nikhil_singh_0704?igsh=MXgxaWw3czU4MHRrcw==" title="Instagram Profile">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://x.com/NikhilSing36475" title="Twitter Profile">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:indianikhil07@gmail.com" title="Send Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            
-            <p style="margin-top: 25px; opacity: 0.9; font-size: 1.1rem;">
-                <strong>NIKHIL SINGH</strong><br>
-                <small style="opacity: 0.7;">Web Developer | IIT Delhi Student | Engineering Physics</small>
-            </p>
-            
-            <p style="margin-top: 20px; opacity: 0.6; font-size: 0.9rem;">
-                © 2025 Nikhil Singh. All rights reserved.<br>
-                Hosted on GitHub Pages | Built with HTML, CSS & JavaScript
-            </p>
-        </div>
-    </footer>
-
-    <!-- JavaScript for Interactions -->
-    <script>
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
                 
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Add animation to skill cards when they come into view
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe skill cards
-        document.querySelectorAll('.skill-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-        
-        // Simple typing effect for tagline (optional)
-        const tagline = document.querySelector('.tagline');
-        if(tagline) {
-            const originalText = tagline.textContent;
-            tagline.textContent = '';
-            let i = 0;
-            
-            function typeWriter() {
-                if (i < originalText.length) {
-                    tagline.textContent += originalText.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 50);
-                }
-            }
-            
-            // Start typing after page loads
-            setTimeout(typeWriter, 1000);
-        }
-    </script>
-</body>
-</html>
+                <div class="research-card">
+                    <div class="research-title">Machine Learning for Physics Simulation Optimization</div>
+                    <div class="research-authors">Nikhil Singh, Prof. S. Patel</div>
+                    <div class="research-journal">Journal of Computational Physics, 2023</div>
+                    <div class="research-abstract">
+                        Investigated the use of machine learning algorithms to optimize computational physics simulations, reducing processing time by 40% while maintaining 99.5% accuracy in quantum state predictions.
+                    </div>
+                    <a href="#" class="research-link">View Full Paper →</a>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-title">Web-Based Visualization Tools for Quantum Mechanics Education</div>
+                    <div class="research-authors">Nikhil Singh, Dr. M. Gupta</div>
+                    <div class="research-journal">Physics Education Technology Journal, 2023</div>
+                    <div class="research-abstract">
+                        Developed an interactive web application using JavaScript and Three.js to visualize quantum mechanical concepts, making abstract physics principles more accessible to undergraduate students.
+                    </div>
+                    <a href="#" class="research-link">View Full Paper →</a>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-title">Energy-Efficient Algorithms for Large-Scale Web Applications</div>
+                    <div
