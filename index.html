@@ -16,7 +16,8 @@
         body {
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
         }
         
         .container {
@@ -31,104 +32,195 @@
             color: white;
             padding: 100px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
         }
         
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             border: 5px solid white;
-            margin-bottom: 20px;
+            margin: 0 auto 25px;
             object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+            transition: transform 0.5s;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
         }
         
         h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .tagline {
-            font-size: 1.5rem;
-            opacity: 0.9;
-            margin-bottom: 10px;
+            font-size: 1.6rem;
+            opacity: 0.95;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            font-weight: 300;
         }
         
         .education {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 12px 25px;
+            border-radius: 50px;
             display: inline-block;
-            margin-top: 15px;
-            font-size: 1.1rem;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 2;
         }
         
         /* Sections */
         section {
-            padding: 80px 0;
+            padding: 90px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             color: #2d3436;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            border-radius: 2px;
         }
         
         /* About */
         .about-content {
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 60px;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
         
         .about-text {
             flex: 1;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #555;
+        }
+        
+        .highlight {
+            color: #667eea;
+            font-weight: 600;
         }
         
         /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 35px;
         }
         
         .skill-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             text-align: center;
-            transition: transform 0.3s;
+            transition: all 0.4s;
+            border: 2px solid transparent;
         }
         
         .skill-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+        
+        .skill-card i {
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         /* Contact */
         .contact-info {
             text-align: center;
-            margin-top: 30px;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .contact-btn {
             display: inline-block;
-            background: #667eea;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 15px 40px;
+            padding: 18px 50px;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1rem;
+            font-weight: 600;
+            font-size: 1.2rem;
             transition: all 0.3s;
-            border: 2px solid #667eea;
+            border: none;
+            margin-top: 20px;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
         }
         
         .contact-btn:hover {
-            background: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+            background: linear-gradient(135deg, #5a6fd8, #6a4090);
+        }
+        
+        .contact-details {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .contact-item {
+            display: inline-block;
+            margin: 0 20px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item i {
             color: #667eea;
+            margin-right: 10px;
         }
         
         /* Footer */
@@ -136,26 +228,40 @@
             background: #2d3436;
             color: white;
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
+            margin-top: 60px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
         }
         
         .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
             color: white;
-            font-size: 1.5rem;
-            margin: 0 15px;
+            font-size: 1.3rem;
             transition: all 0.3s;
-            display: inline-block;
         }
         
         .social-links a:hover {
-            color: #667eea;
-            transform: scale(1.2);
+            background: #667eea;
+            transform: translateY(-5px);
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .about-content {
                 flex-direction: column;
+                padding: 30px;
             }
             
             h1 {
@@ -163,21 +269,31 @@
             }
             
             .section-title {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
             header {
                 padding: 70px 0;
             }
+            
+            .profile-img {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .contact-item {
+                display: block;
+                margin: 15px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header with Profile -->
+    <!-- Header with Your Actual Photo -->
     <header>
         <div class="container">
-            <!-- Profile Image - Placeholder working perfectly -->
-            <img src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=NS" 
+            <!-- YOUR PHOTO FROM GITHUB -->
+            <img src="nikhil.jpg" 
                  alt="Nikhil Singh" 
                  class="profile-img">
             
@@ -197,40 +313,40 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm <strong>Nikhil Singh</strong>, a passionate developer and B.Tech student at IIT Delhi specializing in Engineering Physics. I bridge the gap between cutting-edge physics and modern web technologies.</p>
+                    <p>Hello! I'm <span class="highlight">Nikhil Singh</span>, a passionate developer and B.Tech student at <span class="highlight">IIT Delhi</span> specializing in Engineering Physics. I bridge the gap between cutting-edge physics and modern web technologies.</p>
                     <br>
                     <p>My journey combines analytical thinking from physics with creative problem-solving in web development. I enjoy creating beautiful, functional websites and applications that make a difference.</p>
                     <br>
-                    <p>Currently, I'm expanding my skills in full-stack development while applying computational methods to physics problems. This website, hosted on GitHub Pages, showcases my work and journey.</p>
+                    <p>Currently, I'm expanding my skills in full-stack development while applying computational methods to physics problems. This website, hosted on GitHub Pages, showcases my work and journey as I prepare for a career at the intersection of technology and science.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" style="background: #f1f2f6;">
+    <section id="skills" style="background: #f8f9fa;">
         <div class="container">
             <h2 class="section-title">My Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <i class="fas fa-code fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
+                    <i class="fas fa-code fa-3x"></i>
                     <h3>Web Development</h3>
-                    <p>HTML5, CSS3, JavaScript, React.js, Node.js, Git</p>
+                    <p>HTML5, CSS3, JavaScript, React.js, Node.js, Git, GitHub</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-paint-brush fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
+                    <i class="fas fa-paint-brush fa-3x"></i>
                     <h3>UI/UX Design</h3>
-                    <p>Figma, Adobe Creative Suite, Responsive Design</p>
+                    <p>Figma, Adobe Creative Suite, Responsive Design, Wireframing</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-laptop-code fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
+                    <i class="fas fa-laptop-code fa-3x"></i>
                     <h3>Programming</h3>
-                    <p>Python, C++, JavaScript, Data Structures</p>
+                    <p>Python, C++, JavaScript, Data Structures, Algorithms</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-atom fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
+                    <i class="fas fa-atom fa-3x"></i>
                     <h3>Physics & Engineering</h3>
-                    <p>Computational Physics, Quantum Mechanics, MATLAB</p>
+                    <p>Computational Physics, Quantum Mechanics, MATLAB, Data Analysis</p>
                 </div>
             </div>
         </div>
@@ -241,21 +357,32 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-info">
-                <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 1.25rem; margin-bottom: 30px; line-height: 1.7;">
                     Interested in collaboration, research opportunities, or just want to connect? 
-                    I'm always open to discussing new projects and ideas.
+                    I'm always open to discussing new projects, internships, and innovative ideas at the intersection of technology and science.
                 </p>
                 
                 <a href="mailto:indianikhil07@gmail.com" class="contact-btn">
                     <i class="fas fa-envelope"></i> Contact Me
                 </a>
                 
-                <div style="margin-top: 40px;">
-                    <p style="font-size: 1.1rem;">
-                        📧 <strong>Email:</strong> indianikhil07@gmail.com<br>
-                        🎓 <strong>Education:</strong> IIT Delhi, Engineering Physics<br>
-                        📍 <strong>Location:</strong> Delhi, India
-                    </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <strong>Email:</strong> indianikhil07@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <strong>Education:</strong> IIT Delhi, Engineering Physics
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>Location:</strong> Delhi, India
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <strong>GitHub:</strong> github.com/indianikhil07
+                    </div>
                 </div>
             </div>
         </div>
@@ -265,29 +392,38 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/indianikhil07" title="GitHub">
+                <a href="https://github.com/indianikhil07" title="GitHub Profile">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="#" title="LinkedIn">
+                <a href="#" title="LinkedIn Profile">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="#" title="Twitter">
+                <a href="#" title="Twitter Profile">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="mailto:indianikhil07@gmail.com" title="Email">
+                <a href="mailto:indianikhil07@gmail.com" title="Send Email">
                     <i class="fas fa-envelope"></i>
                 </a>
+                <a href="#" title="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
-            <p style="margin-top: 25px; opacity: 0.8;">
-                © 2025 NIKHIL SINGH. Portfolio Website.<br>
-                <small>Hosted on GitHub Pages | IIT Delhi</small>
+            
+            <p style="margin-top: 25px; opacity: 0.9; font-size: 1.1rem;">
+                <strong>NIKHIL SINGH</strong><br>
+                <small style="opacity: 0.7;">Web Developer | IIT Delhi Student | Engineering Physics</small>
+            </p>
+            
+            <p style="margin-top: 20px; opacity: 0.6; font-size: 0.9rem;">
+                © 2025 Nikhil Singh. All rights reserved.<br>
+                Hosted on GitHub Pages | Built with HTML, CSS & JavaScript
             </p>
         </div>
     </footer>
 
-    <!-- Simple JavaScript for smooth scrolling -->
+    <!-- JavaScript for Interactions -->
     <script>
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -297,26 +433,54 @@
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
                 }
             });
         });
         
-        // Add animation to skill cards on scroll
-        window.addEventListener('scroll', function() {
-            const skillCards = document.querySelectorAll('.skill-card');
-            skillCards.forEach(card => {
-                const cardPosition = card.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                
-                if(cardPosition < screenPosition) {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
+        // Add animation to skill cards when they come into view
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
+        }, observerOptions);
+        
+        // Observe skill cards
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
+        
+        // Simple typing effect for tagline (optional)
+        const tagline = document.querySelector('.tagline');
+        if(tagline) {
+            const originalText = tagline.textContent;
+            tagline.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    tagline.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            // Start typing after page loads
+            setTimeout(typeWriter, 1000);
+        }
     </script>
 </body>
 </html>
