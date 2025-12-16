@@ -21,7 +21,7 @@
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -174,73 +174,102 @@
             background-clip: text;
         }
         
-        /* Research Papers */
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 35px;
-            margin-top: 40px;
-        }
-        
-        .research-card {
+        /* Research Tabs */
+        .research-tabs {
             background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            transition: all 0.4s;
-            border-left: 5px solid #667eea;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
         
-        .research-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            border-left-color: #764ba2;
+        .tab-header {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            min-width: 150px;
+            padding: 20px;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #6c757d;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .tab-btn:hover {
+            background: #e9ecef;
+            color: #495057;
+        }
+        
+        .tab-btn.active {
+            background: white;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .tab-content {
+            padding: 50px;
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .research-area {
+            margin-bottom: 40px;
         }
         
         .research-title {
             color: #2d3436;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
         
-        .research-authors {
-            color: #667eea;
-            font-style: italic;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-        
-        .research-journal {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .research-abstract {
+        .research-description {
             color: #555;
-            font-size: 0.95rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .research-points {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        
+        .research-points li {
+            margin-bottom: 10px;
+            color: #666;
             line-height: 1.6;
-            margin-bottom: 20px;
         }
         
-        .research-link {
-            display: inline-block;
+        .research-points strong {
             color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            padding: 8px 15px;
-            border: 1px solid #667eea;
-            border-radius: 5px;
         }
         
-        .research-link:hover {
-            background: #667eea;
-            color: white;
+        .research-status {
+            display: inline-block;
+            padding: 6px 15px;
+            background: #e3f2fd;
+            color: #1976d2;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 15px;
         }
         
         /* Contact */
@@ -359,8 +388,14 @@
                 gap: 15px;
             }
             
-            .research-grid {
-                grid-template-columns: 1fr;
+            .tab-btn {
+                min-width: 120px;
+                padding: 15px 10px;
+                font-size: 1rem;
+            }
+            
+            .tab-content {
+                padding: 30px;
             }
         }
     </style>
@@ -375,7 +410,7 @@
                  class="profile-img">
             
             <h1>NIKHIL SINGH</h1>
-            <p class="tagline">Web Developer | Designer | Creator</p>
+            <p class="tagline">Web Developer | Physics Researcher | Creator</p>
             
             <div class="education">
                 <i class="fas fa-graduation-cap"></i> 
@@ -390,11 +425,11 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm <span class="highlight">Nikhil Singh</span>, a passionate developer and B.Tech student at <span class="highlight">IIT Delhi</span> specializing in Engineering Physics. I bridge the gap between cutting-edge physics and modern web technologies.</p>
+                    <p>Hello! I'm <span class="highlight">Nikhil Singh</span>, a passionate developer and B.Tech student at <span class="highlight">IIT Delhi</span> specializing in Engineering Physics. My research spans quantum physics, computational methods, and modern web technologies.</p>
                     <br>
-                    <p>My journey combines analytical thinking from physics with creative problem-solving in web development. I enjoy creating beautiful, functional websites and applications that make a difference.</p>
+                    <p>I bridge theoretical physics with practical applications, exploring quantum phenomena, wave communication systems, nuclear processes, machine learning applications, and fluid mechanics through computational approaches.</p>
                     <br>
-                    <p>Currently, I'm expanding my skills in full-stack development while applying computational methods to physics problems. This website, hosted on GitHub Pages, showcases my work and journey as I prepare for a career at the intersection of technology and science.</p>
+                    <p>This website showcases my interdisciplinary journey at the intersection of physics, technology, and innovation as I prepare for advanced research and development opportunities.</p>
                 </div>
             </div>
         </div>
@@ -411,59 +446,330 @@
                     <p>HTML5, CSS3, JavaScript, React.js, Node.js, Git, GitHub</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-paint-brush fa-3x"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Figma, Adobe Creative Suite, Responsive Design, Wireframing</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-laptop-code fa-3x"></i>
-                    <h3>Programming</h3>
-                    <p>Python, C++, JavaScript, Data Structures, Algorithms</p>
-                </div>
-                <div class="skill-card">
                     <i class="fas fa-atom fa-3x"></i>
-                    <h3>Physics & Engineering</h3>
-                    <p>Computational Physics, Quantum Mechanics, MATLAB, Data Analysis</p>
+                    <h3>Physics Research</h3>
+                    <p>Quantum Mechanics, Nuclear Physics, Wave Theory, Fluid Dynamics</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain fa-3x"></i>
+                    <h3>Machine Learning</h3>
+                    <p>Python, TensorFlow, Data Analysis, Predictive Modeling</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-calculator fa-3x"></i>
+                    <h3>Computational Tools</h3>
+                    <p>MATLAB, COMSOL, Python SciPy, Numerical Methods</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Research Papers Section -->
+    <!-- Research Interests Section -->
     <section id="research">
         <div class="container">
-            <h2 class="section-title">Research Papers & Publications</h2>
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="research-title">Quantum Computing Applications in Web Security</div>
-                    <div class="research-authors">Nikhil Singh, Dr. R. Sharma, Prof. A. Kumar</div>
-                    <div class="research-journal">International Journal of Quantum Information Science, 2024</div>
-                    <div class="research-abstract">
-                        This paper explores the potential applications of quantum computing principles in enhancing modern web security protocols. We propose a hybrid quantum-classical encryption model that could significantly improve data protection for web applications.
-                    </div>
-                    <a href="#" class="research-link">View Full Paper →</a>
+            <h2 class="section-title">Research Interests</h2>
+            
+            <div class="research-tabs">
+                <!-- Tab Headers -->
+                <div class="tab-header">
+                    <button class="tab-btn active" data-tab="quantum">
+                        <i class="fas fa-atom"></i> Quantum Physics
+                    </button>
+                    <button class="tab-btn" data-tab="waves">
+                        <i class="fas fa-wave-square"></i> Waves & Communication
+                    </button>
+                    <button class="tab-btn" data-tab="nuclear">
+                        <i class="fas fa-radiation"></i> Nuclear Physics
+                    </button>
+                    <button class="tab-btn" data-tab="ml">
+                        <i class="fas fa-brain"></i> Machine Learning
+                    </button>
+                    <button class="tab-btn" data-tab="fluid">
+                        <i class="fas fa-water"></i> Fluid Mechanics
+                    </button>
+                    <button class="tab-btn" data-tab="computational">
+                        <i class="fas fa-laptop-code"></i> Computational Methods
+                    </button>
                 </div>
                 
-                <div class="research-card">
-                    <div class="research-title">Machine Learning for Physics Simulation Optimization</div>
-                    <div class="research-authors">Nikhil Singh, Prof. S. Patel</div>
-                    <div class="research-journal">Journal of Computational Physics, 2023</div>
-                    <div class="research-abstract">
-                        Investigated the use of machine learning algorithms to optimize computational physics simulations, reducing processing time by 40% while maintaining 99.5% accuracy in quantum state predictions.
+                <!-- Tab Contents -->
+                <div class="tab-content active" id="quantum-tab">
+                    <div class="research-area">
+                        <h3 class="research-title">Quantum Physics Research</h3>
+                        <p class="research-description">
+                            Exploring quantum phenomena including superposition, entanglement, and quantum computing applications. 
+                            Investigating quantum algorithms for optimization problems and quantum communication protocols.
+                        </p>
+                        
+                        <ul class="research-points">
+                            <li><strong>Quantum Computing:</strong> Studying quantum algorithms for complex problem-solving</li>
+                            <li><strong>Quantum Information:</strong> Researching quantum encryption and secure communication</li>
+                            <li><strong>Quantum Simulations:</strong> Developing models for quantum systems using computational methods</li>
+                            <li><strong>Experimental Design:</strong> Planning quantum measurement and observation techniques</li>
+                        </ul>
+                        
+                        <div class="research-status">Active Research Area</div>
                     </div>
-                    <a href="#" class="research-link">View Full Paper →</a>
                 </div>
                 
-                <div class="research-card">
-                    <div class="research-title">Web-Based Visualization Tools for Quantum Mechanics Education</div>
-                    <div class="research-authors">Nikhil Singh, Dr. M. Gupta</div>
-                    <div class="research-journal">Physics Education Technology Journal, 2023</div>
-                    <div class="research-abstract">
-                        Developed an interactive web application using JavaScript and Three.js to visualize quantum mechanical concepts, making abstract physics principles more accessible to undergraduate students.
+                <div class="tab-content" id="waves-tab">
+                    <div class="research-area">
+                        <h3 class="research-title">Waves & Communication Systems</h3>
+                        <p class="research-description">
+                            Researching wave propagation, signal processing, and modern communication technologies. 
+                            Exploring applications in wireless communication, optical systems, and quantum communication.
+                        </p>
+                        
+                        <ul class="research-points">
+                            <li><strong>Wave Propagation:</strong> Studying electromagnetic and acoustic wave behavior</li>
+                            <li><strong>Signal Processing:</strong> Developing algorithms for signal analysis and enhancement</li>
+                            <li><strong>Communication Systems:</strong> Researching 5G/6G technologies and optical communication</li>
+                            <li><strong>Quantum Communication:</strong> Exploring quantum key distribution and secure channels</li>
+                        </ul>
+                        
+                        <div class="research-status">Active Research Area</div>
                     </div>
-                    <a href="#" class="research-link">View Full Paper →</a>
                 </div>
                 
-                <div class="research-card">
-                    <div class="research-title">Energy-Efficient Algorithms for Large-Scale Web Applications</div>
-                    <div
+                <div class="tab-content" id="nuclear-tab">
+                    <div class="research-area">
+                        <h3 class="research-title">Nuclear Physics Research</h3>
+                        <p class="research-description">
+                            Investigating nuclear reactions, particle physics, and applications in energy production and medical imaging. 
+                            Studying nuclear models and radiation interactions with matter.
+                        </p>
+                        
+                        <ul class="research-points">
+                            <li><strong>Nuclear Reactions:</strong> Analyzing fusion/fission processes and cross-sections</li>
+                            <li><strong>Particle Physics:</strong> Studying fundamental particles and interactions</li>
+                            <li><strong>Medical Applications:</strong> Researching radiation therapy and diagnostic imaging</li>
+                            <li><strong>Energy Systems:</strong> Exploring nuclear energy and fusion power potential</li>
+                        </ul>
+                        
+                        <div class="research-status">Active Research Area</div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="ml-tab">
+                    <div class="research-area">
+                        <h3 class="research-title">Machine Learning Applications</h3>
+                        <p class="research-description">
+                            Applying machine learning algorithms to physics problems, data analysis, and predictive modeling. 
+                            Developing neural networks for pattern recognition in scientific data.
+                        </p>
+                        
+                        <ul class="research-points">
+                            <li><strong>Physics Applications:</strong> Using ML for particle tracking and event classification</li>
+                            <li><strong>Predictive Modeling:</strong> Developing models for complex physical systems</li>
+                            <li><strong>Data Analysis:</strong> Applying ML to experimental data interpretation</li>
+                            <li><strong>Algorithm Development:</strong> Creating custom ML solutions for physics problems</li>
+                        </ul>
+                        
+                        <div class="research-status">Active Research Area</div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="fluid-tab">
+                    <div class="research-area">
+                        <h3 class="research-title">Fluid Mechanics Research</h3>
+                        <p class="research-description">
+                            Studying fluid dynamics, turbulence, and flow behavior in various systems. 
+                            Applying computational fluid dynamics (CFD) to solve complex flow problems.
+                        </p>
+                        
+                        <ul class="research-points">
+                            <li><strong>CFD Simulations:</strong> Using numerical methods to model fluid flows</li>
+                            <li><strong>Turbulence Studies:</strong> Analyzing turbulent flow patterns and energy transfer</li>
+                            <li><strong>Aerodynamics:</strong> Researching airflow around objects and vehicles</li>
+                            <li><strong>Biofluid Dynamics:</strong> Studying fluid flow in biological systems</li>
+                        </ul>
+                        
+                        <div class="research-status">Active Research Area</div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="computational-tab">
+                    <div class="research-area">
+                        <h3 class="research-title">Computational Physics Methods</h3>
+                        <p class="research-description">
+                            Developing and applying computational techniques to solve complex physics problems. 
+                            Creating simulations, numerical models, and data visualization tools.
+                        </p>
+                        
+                        <ul class="research-points">
+                            <li><strong>Numerical Methods:</strong> Implementing algorithms for differential equations</li>
+                            <li><strong>Simulation Development:</strong> Creating physics simulation software</li>
+                            <li><strong>Data Visualization:</strong> Developing tools for scientific data representation</li>
+                            <li><strong>High-Performance Computing:</strong> Utilizing parallel computing for complex simulations</li>
+                        </ul>
+                        
+                        <div class="research-status">Active Research Area</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <p style="font-size: 1.25rem; margin-bottom: 30px; line-height: 1.7;">
+                    Interested in research collaboration, academic discussions, or innovative projects at the intersection of physics and technology? 
+                    I'm always open to connecting with fellow researchers and innovators.
+                </p>
+                
+                <a href="mailto:indianikhil07@gmail.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <strong>Email:</strong> indianikhil07@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <strong>Education:</strong> IIT Delhi, Engineering Physics
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>Location:</strong> Delhi, India
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <strong>GitHub:</strong> github.com/indianikhil07
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <strong>LinkedIn:</strong> linkedin.com/in/nikhil-singh-852378394
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <strong>Instagram:</strong> @nikhil_singh_0704
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-twitter"></i>
+                        <strong>Twitter:</strong> @NikhilSing36475
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/indianikhil07" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/nikhil-singh-852378394" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/nikhil_singh_0704?igsh=MXgxaWw3czU4MHRrcw==" title="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/NikhilSing36475" title="Twitter Profile">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:indianikhil07@gmail.com" title="Send Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <p style="margin-top: 25px; opacity: 0.9; font-size: 1.1rem;">
+                <strong>NIKHIL SINGH</strong><br>
+                <small style="opacity: 0.7;">Research Student | IIT Delhi | Engineering Physics & Web Developer</small>
+            </p>
+            
+            <p style="margin-top: 20px; opacity: 0.6; font-size: 0.9rem;">
+                © 2025 Nikhil Singh. All rights reserved.<br>
+                Hosted on GitHub Pages | Built with HTML, CSS & JavaScript
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Tabs -->
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                button.classList.add('active');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation to skill cards when they come into view
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe skill cards
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+        
+        // Simple typing effect for tagline (optional)
+        const tagline = document.querySelector('.tagline');
+        if(tagline) {
+            const originalText = tagline.textContent;
+            tagline.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    tagline.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            // Start typing after page loads
+            setTimeout(typeWriter, 1000);
+        }
+    </script>
+</body>
+</html>
