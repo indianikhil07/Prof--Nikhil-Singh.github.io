@@ -2,18 +2,21 @@
 
 **Web Developer | Designer | Creator | Coder**
 
-![Profile Picture](https://via.placeholder.com/200x200/0066CC/FFFFFF?text=NS)
+![My Photo](![nikhil](https://github.com/user-attachments/assets/164389f3-5774-4070-8079-bc0c75899940)
+)
 
 📍 Delhi, India  
 📧 indianikhil@gmail.com  
 💼 Professor & Developer  
-🔗 [LinkedIn Profile](https://linkedin.com/in/yourprofile)
+🔗 [LinkedIn Profile](linkedin.com/in/nikhil-singh-852378394
+Phone-7739919022
+)
 
 ---
 
 ## About Me
 
-Hello! I'm  Nikhil Singh, a passionate developer and educator who loves creating beautiful, functional websites.I am prusing B-TECH FROM IIT DELHI IN ENGINEERING PHYSICS , I enjoy learning new technologies and solving problems with code.
+Hello! I'm Nikhil Singh, a passionate developer and educator who loves creating beautiful, functional websites. I am pursuing B.Tech from IIT Delhi in Engineering Physics. I enjoy learning new technologies and solving problems with code.
 
 This website is hosted for free on GitHub Pages! You can customize it to showcase your work, skills, and personality.
 
@@ -25,10 +28,20 @@ This website is hosted for free on GitHub Pages! You can customize it to showcas
 HTML, CSS, JavaScript, React, Node.js
 
 ### UI/UX Design
-Figma, Adobe Creative Suite, User Research
+Figma, Adobe Creative Suite
 
-### Teaching & Mentoring
-Curriculum Development, Student Guidance, Workshops
+### Programming Languages
+Python, C++, JavaScript
+
+### Physics & Engineering
+Quantum Mechanics, Computational Physics, Data Analysis
+
+---
+
+## Education
+🎓 **Indian Institute of Technology, Delhi**  
+B.Tech in Engineering Physics (Expected 2026)  
+CGPA: [8.23 1st semester]
 
 ---
 
@@ -36,4 +49,5 @@ Curriculum Development, Student Guidance, Workshops
 
 Interested in working together? Feel free to reach out!
 
-[Contact Me](indianikhil@gmail.com)
+[📨 Email Me](mailto:indianikhil@gmail.com)  
+[💻 GitHub Profile](https://github.com/indianikhil07)
