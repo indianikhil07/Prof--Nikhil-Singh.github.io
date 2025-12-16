@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIKHIL SINGH | Portfolio</title>
+    <title>NIKHIL SINGH | Portfolio - IIT Delhi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { line-height: 1.6; color: #333; background-color: #f8f9fa; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         
         /* Header */
         header {
@@ -17,6 +32,7 @@
             padding: 100px 0;
             text-align: center;
         }
+        
         .profile-img {
             width: 180px;
             height: 180px;
@@ -25,12 +41,38 @@
             margin-bottom: 20px;
             object-fit: cover;
         }
-        h1 { font-size: 3rem; margin-bottom: 10px; }
-        .tagline { font-size: 1.5rem; opacity: 0.9; }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .education {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
         
         /* Sections */
-        section { padding: 80px 0; }
-        .section-title { text-align: center; margin-bottom: 50px; color: #2d3436; }
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2d3436;
+            font-size: 2.2rem;
+        }
         
         /* About */
         .about-content {
@@ -39,18 +81,54 @@
             gap: 50px;
         }
         
+        .about-text {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
         /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
+        
         .skill-card {
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Contact */
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid #667eea;
+        }
+        
+        .contact-btn:hover {
+            background: transparent;
+            color: #667eea;
         }
         
         /* Footer */
@@ -60,93 +138,125 @@
             text-align: center;
             padding: 40px 0;
         }
+        
         .social-links a {
             color: white;
             font-size: 1.5rem;
             margin: 0 15px;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            display: inline-block;
         }
-        .social-links a:hover { color: #667eea; }
+        
+        .social-links a:hover {
+            color: #667eea;
+            transform: scale(1.2);
+        }
         
         /* Responsive */
         @media (max-width: 768px) {
-            .about-content { flex-direction: column; }
-            h1 { font-size: 2.5rem; }
+            .about-content {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            header {
+                padding: 70px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header with Profile -->
     <header>
         <div class="container">
-            <!-- YOUR PHOTO GOES HERE -->
-            <img src="https://github.com/user-attachments/assets/164389f3-5774-4070-8079-bc0c75899940" 
+            <!-- Profile Image - Placeholder working perfectly -->
+            <img src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=NS" 
                  alt="Nikhil Singh" 
                  class="profile-img">
             
             <h1>NIKHIL SINGH</h1>
             <p class="tagline">Web Developer | Designer | Creator</p>
-            <p style="margin-top: 15px; font-size: 1.1rem;">
+            
+            <div class="education">
                 <i class="fas fa-graduation-cap"></i> 
-                B.Tech Engineering Physics, IIT Delhi
-            </p>
+                B.Tech Engineering Physics | IIT Delhi
+            </div>
         </div>
     </header>
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div style="flex: 1;">
-                    <p>Hello! I'm Nikhil Singh, a passionate developer and B.Tech student at IIT Delhi studying Engineering Physics. I love creating beautiful, functional websites and enjoy learning new technologies and solving problems with code.</p>
+                <div class="about-text">
+                    <p>Hello! I'm <strong>Nikhil Singh</strong>, a passionate developer and B.Tech student at IIT Delhi specializing in Engineering Physics. I bridge the gap between cutting-edge physics and modern web technologies.</p>
                     <br>
-                    <p>This website is hosted for free on GitHub Pages and showcases my work, skills, and personality.</p>
+                    <p>My journey combines analytical thinking from physics with creative problem-solving in web development. I enjoy creating beautiful, functional websites and applications that make a difference.</p>
+                    <br>
+                    <p>Currently, I'm expanding my skills in full-stack development while applying computational methods to physics problems. This website, hosted on GitHub Pages, showcases my work and journey.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills Section -->
     <section id="skills" style="background: #f1f2f6;">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
+            <h2 class="section-title">My Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <i class="fas fa-code fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
                     <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript, React, Node.js</p>
+                    <p>HTML5, CSS3, JavaScript, React.js, Node.js, Git</p>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-paint-brush fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
                     <h3>UI/UX Design</h3>
-                    <p>Figma, Adobe Creative Suite</p>
+                    <p>Figma, Adobe Creative Suite, Responsive Design</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-mobile-alt fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
-                    <h3>Responsive Design</h3>
-                    <p>Mobile-first approach</p>
+                    <i class="fas fa-laptop-code fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
+                    <h3>Programming</h3>
+                    <p>Python, C++, JavaScript, Data Structures</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-graduation-cap fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
-                    <h3>Education</h3>
-                    <p>IIT Delhi | Engineering Physics</p>
+                    <i class="fas fa-atom fa-3x" style="color: #667eea; margin-bottom: 20px;"></i>
+                    <h3>Physics & Engineering</h3>
+                    <p>Computational Physics, Quantum Mechanics, MATLAB</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p>Interested in working together? Feel free to reach out!</p>
-                <br>
-                <a href="mailto:indianikhil07@gmail.com" 
-                   style="display: inline-block; background: #667eea; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            <div class="contact-info">
+                <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Interested in collaboration, research opportunities, or just want to connect? 
+                    I'm always open to discussing new projects and ideas.
+                </p>
+                
+                <a href="mailto:indianikhil07@gmail.com" class="contact-btn">
                     <i class="fas fa-envelope"></i> Contact Me
                 </a>
+                
+                <div style="margin-top: 40px;">
+                    <p style="font-size: 1.1rem;">
+                        📧 <strong>Email:</strong> indianikhil07@gmail.com<br>
+                        🎓 <strong>Education:</strong> IIT Delhi, Engineering Physics<br>
+                        📍 <strong>Location:</strong> Delhi, India
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -155,13 +265,58 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/indianikhil07"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:indianikhil07@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/indianikhil07" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:indianikhil07@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
-            <p style="margin-top: 20px;">© 2025 NIKHIL SINGH. Hosted on GitHub Pages.</p>
+            <p style="margin-top: 25px; opacity: 0.8;">
+                © 2025 NIKHIL SINGH. Portfolio Website.<br>
+                <small>Hosted on GitHub Pages | IIT Delhi</small>
+            </p>
         </div>
     </footer>
+
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation to skill cards on scroll
+        window.addEventListener('scroll', function() {
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if(cardPosition < screenPosition) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
